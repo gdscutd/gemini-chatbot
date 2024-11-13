@@ -20,6 +20,9 @@ export async function generateTextCreative(message: string) {
   }
 }
 
+/**
+ * Generates text based on the given input message using the normal model.
+ */
 export async function generateTextNormal(message: string) {
   try {
     // Call the generateText function, passing the input message and the model.
