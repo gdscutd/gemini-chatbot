@@ -5,12 +5,11 @@ import { useState } from "react";
 const JokeGenerator = () => {
   const [joke, setJoke] = useState("Press the button to generate a joke...");
 
-  const { mutateAsync: generateJoke, isPending: isJokePending } =
-    useGenerateTextCreative();
+  const { mutateAsync: generateJoke } = useGenerateTextCreative();
 
   const handleGenerateJoke = async () => {
     const newJoke = await generateJoke(
-      "tell me a joke and make sure to make it as unique as possible"
+      "tell me a joke and make sure to make it as unique as possible" // Prompt
     );
     console.log(newJoke);
     setJoke(newJoke ?? "Something went wrong");

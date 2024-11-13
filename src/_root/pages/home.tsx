@@ -18,6 +18,12 @@ const Home = () => {
       >
         Joke Generator
       </Button>
+      <Button
+        className="bg-green-600 hover:bg-green-900"
+        onClick={() => navigate("/your-generator")}
+      >
+        Your Own Generator
+      </Button>
     </div>
   );
 };
